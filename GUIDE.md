@@ -1,6 +1,8 @@
 # Flask Workshop Guide
 Meant to be used as a _follow along_ guide for HackToLearn Backend Workshop I.
 
+> Note: Everything is case-sensitive. Make sure to follow the instructions carefully.
+
 ## Setting up Flask Environment in repl.it
 - Go to [repl.it](https://replit.com)
 - Login into your account or signup for a new account

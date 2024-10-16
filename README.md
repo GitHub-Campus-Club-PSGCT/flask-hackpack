@@ -2,9 +2,11 @@
 
 Below steps will guide you to run the Flask app locally on your machine. For running it on an online environment, refer to the [GUIDE.md](GUIDE.md) file.
 
+> Note: Everything is case-sensitive. Make sure to follow the instructions carefully.
+
 0. Install Git from [git-scm.com](https://git-scm.com/downloads) and Python from [python.org](https://www.python.org/downloads/) and make sure to check the box that says `Add Python to PATH`.
 
-> Note that if you cannot install git, you can download the repository as a zip file and extract it. But please make sure to install Python.
+> Note: If you cannot install git, you can download the repository as a zip file and extract it. But please make sure to install Python.
 
 1. Clone this repository with the following command:
 
