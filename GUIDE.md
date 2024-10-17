@@ -71,7 +71,7 @@ def add(num1, num2):
 def multiply(num1, num2):
     return f'The product is {num1 * num2}'
 ```
-
+> Note: Upcoming routes would require additional tools like [Postman](https://learning.postman.com/docs/getting-started/overview/) or [Thunder Client](https://www.freecodecamp.org/news/thunder-client-for-vscode/) to test.
 
 ### Routes with different status codes:
 (more about status codes [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status))
