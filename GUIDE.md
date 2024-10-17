@@ -1,7 +1,7 @@
 # Flask Workshop Guide
 Meant to be used as a _follow along_ guide for HackToLearn Backend Workshop I.
 
-> Note: Everything is case-sensitive. Make sure to follow the instructions carefully.
+> Important 🚨: Everything is case-sensitive. Make sure to follow the instructions carefully.
 
 ## Setting up Flask Environment in repl.it
 - Go to [repl.it](https://replit.com)
@@ -71,8 +71,9 @@ def add(num1, num2):
 def multiply(num1, num2):
     return f'The product is {num1 * num2}'
 ```
-> Note: Upcoming routes would require additional tools like [Postman](https://learning.postman.com/docs/getting-started/overview/) or [Thunder Client](https://www.freecodecamp.org/news/thunder-client-for-vscode/) to test.
+> Note 📢: For testing upcoming routes on your computer you would require additional tools like [Postman](https://learning.postman.com/docs/getting-started/overview/) or [Thunder Client](https://www.freecodecamp.org/news/thunder-client-for-vscode/).
 
+> Important 🚨: Click and Copy the green part of the URL in your replit browser window and navigate to [reqbin.com](https://www.reqbin.com).
 ### Routes with different status codes:
 (more about status codes [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status))
 
