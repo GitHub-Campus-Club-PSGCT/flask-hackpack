@@ -36,7 +36,7 @@ pip install pymongo
 
 ## CONNECT TO MONDODB ATLAS
 
-```
+```python
 import pymongo
 from pymongo import MongoClient
 
@@ -51,7 +51,7 @@ collection = db['hacktolearn']
 ### CREATE Operation
 To insert a new document into your collection:
 
-```
+```python
 collection.insert_one({
     "name": "YOUR_NAME",
     "age": 0,  # insert your age here
@@ -62,7 +62,7 @@ collection.insert_one({
 ### READ Operation
 To read a new document from your collection:
 
-```
+```python
 records = collection.find()
 for record in records:
     print(record)
@@ -71,7 +71,7 @@ for record in records:
 ### UPDATE Operation
 To update a document from your collection:
 
-```
+```python
 collection.update_many({
     "name": "YOUR_NAME"  #The record you wanna change
 },
@@ -85,7 +85,7 @@ collection.update_many({
 ### DELETE Operation
 To delete a new document from your collection:
 
-```
+```python
 collection.delete_one({
     "name": "YOUR_NAME"
 })
