@@ -90,3 +90,90 @@ collection.delete_one({
     "name": "YOUR_NAME"
 })
 ```
+
+Got it! Here’s an addition to your existing markdown that includes CRUD operation snippets within a basic Flask app structure, mirroring the format you provided for the PyMongo operations.
+
+---
+
+## 3. Basic Flask App with CRUD Operations
+
+You can integrate the CRUD operations into a Flask app as follows:
+
+### Flask App Setup
+
+First, ensure you have Flask and PyMongo installed:
+
+```bash
+pip install Flask pymongo
+```
+
+Then, create a basic Flask application with the following structure:
+
+```python
+from flask import Flask, request, jsonify
+from pymongo import MongoClient
+
+app = Flask(__name__)
+
+# Connect to MongoDB Atlas
+client = MongoClient('your_connection_string')
+db = client['ghcc']
+collection = db['hacktolearn']
+```
+
+### Running the Flask App
+To run your Flask application, add the following code at the end of your `app.py`:
+
+```python
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+### CREATE Operation (POST)
+To add a new document using a POST request:
+
+```python
+@app.route('/add', methods=['POST'])
+def add_record():
+    data = request.json
+    collection.insert_one(data)
+    return jsonify({"message": "Record added successfully!"}), 201
+```
+
+### READ Operation (GET)
+To retrieve documents using a GET request:
+
+```python
+@app.route('/records', methods=['GET'])
+def get_records():
+    records = collection.find()
+    result = []
+    for record in records:
+        result.append({
+            "name": record.get("name"),
+            "age": record.get("age"),
+            "cool_fact": record.get("cool_fact")
+        })
+    return jsonify(result), 200
+```
+
+### UPDATE Operation (PUT)
+To update an existing document using a PUT request:
+
+```python
+@app.route('/update/<name>', methods=['PUT'])
+def update_record(name):
+    data = request.json
+    collection.update_many({"name": name}, {"$set": data})
+    return jsonify({"message": "Record updated successfully!"}), 200
+```
+
+### DELETE Operation (DELETE)
+To delete a document using a DELETE request:
+
+```python
+@app.route('/delete/<name>', methods=['DELETE'])
+def delete_record(name):
+    collection.delete_one({"name": name})
+    return jsonify({"message": "Record deleted successfully!"}), 200
+```
